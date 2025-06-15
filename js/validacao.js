@@ -1,8 +1,5 @@
 $(document).ready(function(){
-    console.log(typeof $.fn.inputmask);
-
     $("#telefone").inputmask("(99) 99999-9999");
-    console.log($("#telefone"));
 
     $('#contactForm').on('submit', function(event) {
         event.preventDefault();
@@ -55,9 +52,7 @@ $(document).ready(function(){
                 email: email,
                 pedido: pedido,
                 confirmado: simChecked ? 'Sim' : 'Não'
-            };
-            
-            sendMessageToServer(dataDict);        
+            };      
         }
     });
 
