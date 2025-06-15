@@ -4,7 +4,6 @@ $(document).ready(function(){
     $('#contactForm').on('submit', function(event) {
         event.preventDefault();
         
-        
         $('#nomeError').text('');
         $('#telefoneError').text('');
         $('#emailError').text('');
@@ -52,7 +51,8 @@ $(document).ready(function(){
                 email: email,
                 pedido: pedido,
                 confirmado: simChecked ? 'Sim' : 'Não'
-            };      
+            };   
+            this.submit();   
         }
     });
 
