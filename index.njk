@@ -1,0 +1,91 @@
+{% extends "base.njk" %}
+
+{% block css_link %}
+<link rel="stylesheet" href="/css/index.css">
+{% endblock %}
+
+{% block content %}
+<section aria-label="Seção" class="section-div">
+  <div class="div-texto">
+    <h2 class="digitando">Precisando de um sistema ou automação/bot?</h2>
+    <h2>🔍 Encontre a solução perfeita para o seu negócio!</h2>
+    <ul>
+      <li><i class="fa-solid fa-check"></i><strong>Automação de tarefas repetitivas:</strong> Deixe as tarefas repetitivas para os bots e concentre-se no que realmente importa para o crescimento do seu negócio.</li>
+      <li><i class="fa-solid fa-check"></i><strong>Integração perfeita:</strong> Nossos sistemas se integram com suas ferramentas existentes.</li>
+      <li><i class="fa-solid fa-check"></i><strong>Aumento de produtividade:</strong> Foco nas tarefas estratégicas.</li>
+      <li><i class="fa-solid fa-check"></i><strong>Suporte contínuo:</strong> Garantimos funcionamento 24/7.</li>
+    </ul>
+    <p>Não perca tempo com processos manuais. Entre em contato conosco hoje mesmo!</p>
+  </div>
+
+  <form name="contact" netlify netlify-honeypot="bot-field" class="formulario_de_cadastro" id="contactForm" method="POST">
+    <input type="hidden" name="form-name" value="contact">
+    <p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
+
+    <div class="campo">
+      <label for="nome">Nome <span class="estrela">*</span></label>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+    </div>
+
+    <div class="campo">
+      <label for="telefone">Telefone <span class="estrela">*</span></label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" required>
+    </div>
+
+    <div class="campo">
+      <label for="email">E-mail <span class="estrela">*</span></label>
+      <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+    </div>
+
+    <div class="campo">
+      <label for="pedido">Como podemos te ajudar? <span class="estrela">*</span></label>
+      <textarea id="pedido" name="pedido" placeholder="Descreva seu pedido aqui" required></textarea>
+      <span class="descricao_pedido">Descreva exatamente o que está buscando. Quanto mais detalhes, mais rápido conseguimos te dar um retorno. Descrições vagas demais irão atrasar muito o processo de te entregar uma solução.</span>
+    </div>
+
+    <div class="campo">
+      <label for="descricao">Descrevi exatamente o que preciso acima? <span class="estrela">*</span></label>
+      <div class="opcoes">
+        <input type="radio" id="sim" name="descricao" value="Sim" required>
+        <label for="sim">Sim</label>
+        <input type="radio" id="nao" name="descricao" value="Não" required>
+        <label for="nao">Não</label>
+      </div>
+    </div>
+
+    <div class="campo1">
+      <button type="submit">Pedir Orçamento</button>
+    </div>
+  </form>
+</section>
+
+<section class="services">
+  <div class="sobre_titulo">
+    <h1>Nosso trabalho</h1>
+    <p>Conhecimentos</p>
+  </div>
+  <div class="my_services">
+    <ul>
+      <li><i class="fa-brands fa-html5"></i><h2>HTML</h2><p>Criação de páginas web estruturadas.</p></li>
+      <!-- Repeat for other items -->
+    </ul>
+  </div>
+</section>
+{% endblock %}
+
+{% block footer %}
+<footer>
+  <div class="sobre_titulo1">
+    <h1>CodeCraft</h1>
+  </div>
+  <nav>
+    <ul class="footer_sociais">
+      <li><a href="https://wa.me/5541985030786"><i class="fa-brands fa-whatsapp"></i></a></li>
+      <li><a href="https://github.com/Codecraft15"><i class="fa-brands fa-github-alt"></i></a></li>
+      <li><a href="https://www.instagram.com/codecraftbrazil/"><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href="mailto:codecraftcontato1@gmail.com"><i class="fa-regular fa-envelope"></i></a></li>
+    </ul>
+  </nav>
+  <p class="footer_comercial">&copy; 2024 Todos os direitos reservados</p>
+</footer>
+{% endblock %}
